@@ -1,0 +1,67 @@
+PA0		|	WakeUp‘§¡Ù
+PA1		|	
+PA2		|	
+PA3		|	
+PA4		|	SPI1_NSS‘§¡Ù
+PA5		|	SPI1_SCK‘§¡Ù
+PA6		|	SPI1_MISO‘§¡Ù
+PA7		|	SPI1_MOSI‘§¡Ù
+PA8		|	MSO Clock Out‘§¡Ù
+PA9		|	USART1_TX
+PA10	|	USART1_RX
+PA11	|	USB
+PA12	|	USB
+PA13	|	SWDIO
+PA14	|	SWCLK
+PA15	|	
+
+PB0		|	
+PB1		|	
+PB2		|	
+PB3		|	
+PB4		|	
+PB5		|	I2C1_SMBAl‘§¡Ù
+PB6		|	I2C1_SCL‘§¡Ù
+PB7		|	I2C1_SDA‘§¡Ù
+PB8		|	
+PB9		|	
+PB10	|	
+PB11	|	
+PB12	|	
+PB13	|	
+PB14	|	
+PB15	|	
+
+PC13	|	LED,OSC32
+PC14	|	OSC32
+PC15	|	
+
+∞Â…œ“˝Ω≈
+ 3.3--------|-------GND					 LED----------------GND
+ PB5   DHT11|SCL	PB6					 PB4  JNTRST|JTDO	PB3
+ PB7 	 SDA|		PB8					PA15	JTDI|SWCLK	PA14
+ PB9		|LED	PC13				PA13   SWDIO|USB    PA12
+PC14  32.768|32.768	PC15				PA11     USB|U1_RX	PA10
+ PA0		|		PA1					 PA9   U1_TX|MSO	PA8
+ PA2		| 		PA3					PB15  LCD_BL|LCD_Dlk PB14
+ PA4   SD_CS|SD_SCK	PA5	(SPI1)			PB13 LCD_Din|LCD_DC	 PB12
+ PA6 SD_MISO|SD_MOSIPA7	(SPI1)			PB11  LCD_CE|LCD_RST PB10
+ PB0		|-------GND					 PB2		|		PB1
+ GND--------|-------3.3					 GND--------|-------GND
+  5V--------|-------5V					 3.3--------|-------3.3
+  
+ø…”√
+JTAG		PB3 PB4 PB15
+TIM4/CAN	PB8 PB9
+ADC 		PA0,1,2,3;PB0,1
+TIM2(»´±£¡Ù)	PA0,1,2,3
+TIM3(≤ø∑÷)	CH1,3,4
+U2			PA2,3
+
+±£¡Ù
+USART1			PA9,10
+I2C1			PB6,7
+USB				PA11,12
+SPI1(SD)		PA4,5,6,7
+MCO(RF27MHz)	PA8
+WakeUp			PA1
